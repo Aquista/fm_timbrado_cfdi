@@ -63,7 +63,7 @@ module FmTimbradoCfdi
         globals.logger          logger if logger
         globals.open_timeout    15
         globals.read_timeout    15
-        globals.ssl_ciphers     'DEFAULT:@SECLEVEL=0'
+        globals.ssl_ciphers     'DEFAULT@SECLEVEL=0'
       end
     end
 
