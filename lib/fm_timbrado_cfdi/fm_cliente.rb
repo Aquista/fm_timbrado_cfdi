@@ -5,7 +5,7 @@ require 'fm_timbrado_cfdi/fm_respuesta_cancelacion'
 module FmTimbradoCfdi
   class FmCliente
     attr_accessor :user_id, :user_pass, :namespace, :fm_wsdl, :endpoint,
-      :ssl_verify_mode, :log, :log_level, :logger, :ssl_ciphers
+      :ssl_verify_mode, :log, :log_level, :logger
 
     def initialize
       # La configuracion por default es la del ambiente de pruebas de FM
@@ -63,7 +63,7 @@ module FmTimbradoCfdi
         globals.logger          logger if logger
         globals.open_timeout    15
         globals.read_timeout    15
-        globals.ssl_ciphers     ssl_ciphers || 'DEFAULT@SECLEVEL=0'
+        globals.ssl_ciphers     'AES128-SHA256'
       end
     end
 
